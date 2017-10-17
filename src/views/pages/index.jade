@@ -1,0 +1,36 @@
+extends ../layout
+
+block indexCss
+	link(rel="stylesheet",href='/dist/contents/docs.css')
+block content
+	.container(style="margin-top: 60px;")
+		.row
+			.col-md-10
+				- var i=0
+				while i < 12
+					- i ++
+					.bs-callout.bs-callout-info
+						h4 
+							a(href="/",target="_blank") 欢迎来到Keyon Y的个人站
+						p.
+							测试测试测试测试测试测试测试测试测试测试测试测试测试测试
+			.col-md-2
+				.list-group(style='margin-top: 20px;')
+					button.list-group-item(type='button')
+						span.badge 0
+						| javascript
+					button.list-group-item(type='button')
+						span.badge 0
+						| node
+					button.list-group-item(type='button')
+						span.badge 0
+						| webpack
+					button.list-group-item(type='button')
+						span.badge 0
+						| angular 1.0
+					button.list-group-item(type='button')
+						span.badge 0
+						| jade
+					button.list-group-item(type='button')
+						span.badge 0
+						| mongoDB
