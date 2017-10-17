@@ -1,0 +1,49 @@
+doctype
+html
+	head
+		meta(charset='utf-8')
+		title #{title}
+		link(rel="stylesheet",href='/dist/contents/bootstrap.min.css')
+		link(rel="stylesheet",href='/dist/contents/base.css')
+		block indexCss
+	body
+		//- 导航栏
+		nav.navbar.navbar-default.navbar-fixed-top
+			.container
+				.navbar-header
+					button(type='button',class='navbar-toggle collapsed',data-toggle='collapse',data-target='#bs-example-navbar-collapse-1',aria-expanded='false')
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a(href='/',class='navbar-brand brand scrool') Keyon Y
+				.collapse.navbar-collapse
+					ul.nav.navbar-nav.navbar-right
+						li.current
+							a(href='/') Home
+						li
+							a(href='/') Blog
+						li
+							a(href='/') Works
+						li
+							a(href='/') Find
+						li
+							a(href='/') Contact
+						li
+							a(href='/',class='icon icon-github',style='width:60px;height:60px;')
+		block content
+		//- 返回顶部的小工具
+		.toTop
+			ul
+				li
+					i.icon.icon-dingbu
+					span.note 顶部
+				li
+					i.icon.icon-zan
+					span.note 赞
+				li
+					i.icon.icon-liuyan
+					span.note 留言
+		script(src='/dist/scripts/jquery.min.js')
+		script(src='/dist/scripts/bootstrap.min.js')
+		script(src='/dist/scripts/base.js')
