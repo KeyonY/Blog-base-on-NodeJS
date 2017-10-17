@@ -1,0 +1,228 @@
+@charset "utf-8";
+html,body{ height: 100%; }
+*{box-sizing: border-box;}
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form,input{ margin:0; }   ol,li,ul{ margin:0; padding:0; }
+body, button, input, select, textarea { font: 12px/1.5 "Microsoft YaHei",\9ed1\4f53,\5b8b\4f53, "Microsoft JhengHei", STHeiti, MingLiu; }
+h1, h2, h3, h4, h5, h6 { font-size: 100% }
+li{ list-style:none; }
+address, cite, dfn, em, var { font-style: normal }
+a { text-decoration: none !important; outline: none ;font-family:"Microsoft YaHei",\9ed1\4f53,\5b8b\4f53, "Microsoft JhengHei", STHeiti, MingLiu;cursor: pointer;}
+img { border: 0 }
+button, input, select, textarea { font-size: 100% ;font-family:"Microsoft YaHei", \9ed1\4f53,\5b8b\4f53, "Microsoft JhengHei", STHeiti, MingLiu;outline: none;}
+table { border-collapse: collapse; border-spacing: 0 }
+s{ text-decoration: none; }
+.clear:after{ display:block; content:''; clear:both; visibility:hidden; height:0; }
+.clear{ zoom:1; }
+
+body{background-color: #33acc9;scroll-behavior: smooth;}
+
+//头部导航栏
+.navbar-fixed-top.opaque{
+	background-color: rgba(34,34,34,0.95);
+}
+.navbar-default{background-color: transparent; border: none; transition: all 0.3s;}
+.navbar-default .navbar-brand{
+	line-height: 30px; font-size: 22px; color: #fff; font-weight: 700;
+	&:hover{color: #fff;}
+}
+.navbar-default .navbar-nav>li>a{
+	line-height: 30px;
+	font-size: 18px;
+	font-weight: 500;
+	color: #fff;
+	&:hover{
+		color: #ddd;
+		background-color: transparent;
+	}
+}
+.navbar-nav>li.current>a{color: #ddd;}
+//footer
+.footer{
+	height: 60px;
+	line-height: 60px;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+}
+
+//页面左右布局
+.containerBox{
+	width: 1200px;
+	height: inherit;
+	margin: 90px auto 0;
+}
+.pageLeft{
+	float: left;
+	width: 900px;
+	min-height: 800px;
+	padding: 20px;
+	border: 1px solid #eee;
+	background-color: #fff;
+}
+.pageRight{
+	float: right;
+	width: 270px;
+}
+.prBox{
+	margin-bottom: 20px;
+	min-height: 100px;
+	background-color: #fff;
+	border: 1px solid #eee;
+}
+.pr_title{
+	height: 36px;
+	line-height: 36px;
+	font-size: 16px;
+	padding: 0 15px;
+	border-bottom: 1px solid #eee;
+}
+.pr_contBox{
+	padding: 15px;
+}
+
+//右侧 aboutme 模块
+.pr_myInfo{
+	margin-bottom: 20px;
+	min-height: 100px;
+	background-color: #fff;
+	border: 1px solid #eee;
+	.pr_title{
+		height: 36px;
+		line-height: 36px;
+		font-size: 16px;
+		padding: 0 15px;
+		border-bottom: 1px solid #eee;
+	}
+	.pr_contBox{
+		font-size: 14px;
+	}
+	h3{
+		margin-bottom: 10px;
+	}
+}
+
+//返回顶部的小工具
+.toTop{
+	display: none;
+	position: fixed;
+	bottom: 100px;
+	width: 40px;
+	height: 120px;
+	li{
+		position: relative;
+		width: 100%;
+		height: 40px;
+		line-height: 40px;
+		cursor: pointer;
+		i.icon{
+			position: relative;
+			z-index: 5;
+			background-color: #fff;
+		}
+		.note{
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 3;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			transition: right 0.2s;
+			background-color: #555;
+			text-align: center;
+			color: #fff;
+		}
+		&:hover{
+			i.icon{
+				background-color: #555;
+			}
+			.note{
+				right: 40px;
+			}
+		}
+	}
+}
+
+//icon图标-所有
+.icon{display: inline-block; width: 40px; height: 40px; line-height: 40px; font-style: normal;background: url('/dist/contents/images/spirit.png') no-repeat 14px 14px;}
+.icon-github{background: url('/dist/contents/images/icon-github.png') no-repeat 14px 14px;}
+.icon-dingbu{background-position: 4px 6px;}
+.icon-zan{background-position: 4px -32px;}
+.icon-liuyan{background-position: 4px -64px;}
+.icon-liulan{background-position: -3px -100px;}
+.icon-smallzan{background-position: -3px -120px;}
+
+.toTop li:hover .icon-dingbu{background-position: -30px 6px;}
+.toTop li:hover .icon-zan{background-position: -30px -32px;}
+.toTop li:hover .icon-liuyan{background-position: -30px -64px;}
+
+//清除bootstrap默认样式
+.list-group-item:first-child,.list-group-item:last-child{border-radius: 0;}
+.list-group-item{border-color: #eee;}
+
+//blogList/index页面列表样式
+.bloglist{
+	position: relative;
+	width: 820px;
+	height: 150px;
+	margin: 0 20px;
+	padding: 10px 0 0;
+	border-bottom: 1px dotted #eee;
+	font-size: 14px;
+	h3{
+		display: inline-block;
+		font-size: 18px;
+		margin-bottom: 10px;
+		vertical-align: middle;
+		a{color: #333;font-weight: bold;}
+		a:hover{color: #33acc9;}
+	}
+	.bl_tagsBox{
+		display: inline-block;
+		height: 20px;
+		line-height: 15px;
+		margin: 0 20px;
+		vertical-align: middle;
+		span{
+			float: left;
+		}
+		.bl_tags{
+			float: left;
+			height: 16px;
+			line-height: 12px;
+			padding: 0 5px;
+			border: 1px solid #33acc9;
+			border-radius: 2px;
+			color: #33acc9;
+			font-size: 12px;
+		}
+	}
+	& > p{
+		height: 56px;
+		color: #666;
+		font-size: 16px;
+	}
+	.bl_info{
+		position: absolute;
+		bottom: 10px;
+		width: 100%;
+		color: #999;
+		.bli_infos{
+			position: absolute;
+			right: 0;
+			width: 220px;
+			text-align: right;
+			.icon{
+				width: 20px;
+				height: 20px;
+				vertical-align: top;
+			}
+			span{
+				display: inline-block;
+				width: 50px;
+				margin-left: 5px;
+				text-align: left;
+			}
+		}
+	}
+}

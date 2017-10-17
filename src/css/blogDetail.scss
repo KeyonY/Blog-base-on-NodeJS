@@ -1,0 +1,87 @@
+.cb_title{
+	height: 70px;
+	h2{
+		height: 40px;
+		line-height: 30px;
+		border-bottom: 1px solid #eee;
+		font-size: 18px;
+	}
+	& > span{
+		line-height: 26px;
+		font-size: 12px;
+		color: #999;
+	}
+	.smallInfo{
+		position: relative;
+		float: right;
+		width: 200px;
+		height: 28px;
+		line-height: 18px;
+		text-align: right;
+		i,span{vertical-align: middle;}
+		.reminderBox{
+			position: absolute;
+			right: 0;
+			width: 220px;
+			height: 30px;
+			color: #333;
+			.rb_triangle{
+				width: 0;
+				height: 0;
+				margin-left: 188px;
+				border-style: solid;
+				border-width: 0 5px 8px 5px;
+				border-color: transparent transparent #F9E18E transparent;
+			}
+			.rb_note{
+				background-color: #F9E18E;
+			}
+		}
+		#reminderSuccess{
+			display: none;
+			position: absolute;
+			top: -24px;
+			right: 0;
+			color: #33a33a;
+		}
+		.icon-smallzan{
+			cursor: pointer;
+			&:hover{
+				background-position: -25px -120px;
+			}
+		}
+	}
+	.icon{
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		margin: 0 5px 0 20px;
+	}
+}
+.cb_content{
+	margin-top: 20px;
+}
+.prb_list{
+	position: relative;
+	min-height: 60px;
+	line-height: 24px;
+	border-top: 1px dotted #eee;
+	&:nth-child(1){
+		border-top: 0;
+	}
+	.prbl_box{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 28px;
+		line-height: 28px;
+		font-size: 12px;
+		color: #999;
+		.prbl_nick{
+			float: left;
+		}
+		.prbl_time{
+			float: right;
+		}
+	}
+}
